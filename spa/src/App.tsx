@@ -1,11 +1,12 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
+import React from 'react';
 
-function App() {
-  return (
-    <Routes>
-      <Route path={'/'} element={<h1>Seja bem vindo</h1>} />
-    </Routes>
-  )
-}
+import { NavBar } from './components';
 
-export default App
+export const App: React.FC = () => {
+    return (
+        <Routes>
+            <Route index element={<NavBar />} />
+        </Routes>
+    );
+};
